@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.video {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

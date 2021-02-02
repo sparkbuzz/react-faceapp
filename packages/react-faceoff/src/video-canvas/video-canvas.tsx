@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { useWindowSize } from '../hooks/use-window-size';
 
-const VideoCanvas = () => {
+type Props = {} & React.HTMLAttributes<HTMLDivElement>;
+
+const VideoCanvas = (props: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const { width, height } = useWindowSize();
 
@@ -23,7 +25,7 @@ const VideoCanvas = () => {
   }, [width, height]);
 
   return (
-    <video ref={videoRef} autoPlay/>
+    <video ref={videoRef} autoPlay className={props.className} />
   );
 };
 
