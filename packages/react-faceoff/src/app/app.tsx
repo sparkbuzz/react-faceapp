@@ -1,9 +1,8 @@
 import React from 'react';
+import { VideoCanvas } from '../video-canvas';
 
 const App = () => (
-  <div>
-    Welcome to FaceOff...
-  </div>
+  <VideoCanvas/>
 );
 
 export { App };
