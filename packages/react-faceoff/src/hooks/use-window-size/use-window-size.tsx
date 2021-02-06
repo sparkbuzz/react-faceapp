@@ -8,10 +8,12 @@ type WindowSize = {
 
 const DEBOUNCE_TIMEOUT_MS = 200;
 
+let hasResizeListener: boolean = false;
+
 const useWindowSize = (): WindowSize => {
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0
+  const [windowSize, setWindowSize] = useState<WindowSize>({
+    width: window.innerWidth,
+    height: window.innerHeight
   });
 
   useEffect(() => {
@@ -22,7 +24,10 @@ const useWindowSize = (): WindowSize => {
       });
     }, DEBOUNCE_TIMEOUT_MS);
 
-    window.addEventListener('resize', handleWindowResize);
+    if (!hasResizeListener) {
+      window.addEventListener('resize', handleWindowResize);
+      hasResizeListener = true;
+    }
   }, []);
 
   return windowSize;
