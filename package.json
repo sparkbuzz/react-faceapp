@@ -1,10 +1,11 @@
 {
-  "name": "react-faceapp",
-  "version": "0.0.1",
-  "description": "Mono-repo containing react-faceapp.",
   "author": "Josef van Niekerk <josef.van.niekerk@gmail.com>",
+  "description": "Mono-repo containing react-faceapp.",
+  "homepage": "https://sparkbuzz.github.io/react-faceapp/",
   "license": "UNLICENCED",
+  "name": "react-faceapp",
   "private": true,
+  "version": "0.0.1",
   "workspaces": [
     "packages/*"
   ]
