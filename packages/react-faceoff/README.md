@@ -1,2 +1,2 @@
-# FaceOff React App
+# React Face App
 More here soon...

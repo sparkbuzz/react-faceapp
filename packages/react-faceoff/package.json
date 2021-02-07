@@ -1,5 +1,5 @@
 {
-  "name": "@faceoff/react-faceoff",
+  "name": "@faceapp/react-faceapp",
   "version": "0.1.0",
   "dependencies": {
     "@tensorflow-models/face-landmarks-detection": "0.0.1",

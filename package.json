@@ -1,7 +1,7 @@
 {
-  "name": "faceoff",
+  "name": "react-faceapp",
   "version": "0.0.1",
-  "description": "Mono-repo containing the React FaceOff app.",
+  "description": "Mono-repo containing react-faceapp.",
   "author": "Josef van Niekerk <josef.van.niekerk@gmail.com>",
   "license": "UNLICENCED",
   "private": true,

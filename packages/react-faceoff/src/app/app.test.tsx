@@ -5,6 +5,6 @@ import { App } from '.';
 describe('App', () => {
   it.skip('should work', function () {
     const { getByText } = render(<App/>);
-    getByText('Welcome to FaceOff...');
+    getByText('Welcome to react-faceapp...');
   });
 });
