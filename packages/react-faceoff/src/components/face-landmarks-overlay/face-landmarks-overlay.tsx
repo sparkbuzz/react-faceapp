@@ -96,7 +96,7 @@ const FaceLandmarksOverlay = ({ className, drawPointCloud, srcObject }: Props) =
       setContext(ctx);
       return ctx;
     }
-  }, [context, predictions, srcObject, width, height, eyeLRef, eyeRRef]);
+  }, [context, drawPointCloud, predictions, srcObject, width, height, eyeLRef, eyeRRef]);
 
   return <>
     <canvas className={classNames(className, styles.canvas)} ref={canvasRef}/>
