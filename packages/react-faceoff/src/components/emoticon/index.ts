@@ -1,0 +1,1 @@
+export { Emoticon } from './emoticon';

@@ -19,7 +19,7 @@ const App = () => {
         className={styles.cover}
         onReadyStateChange={handleReadyStateChange}
       />
-      {videoIsReady && <FaceLandmarksOverlay srcObject={ref}/>}
+      {videoIsReady && <FaceLandmarksOverlay drawPointCloud={false} srcObject={ref}/>}
     </div>
   );
 };

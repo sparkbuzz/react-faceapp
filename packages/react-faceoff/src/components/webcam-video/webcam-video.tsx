@@ -1,10 +1,10 @@
 import classNames from 'classnames';
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef, HTMLAttributes, useEffect } from 'react';
 import { useWindowSize } from '../../hooks/use-window-size';
 
 type Props = {
   onReadyStateChange: Function
-} & React.HTMLAttributes<HTMLVideoElement>;
+} & HTMLAttributes<HTMLVideoElement>;
 
 const WebcamVideo = forwardRef<HTMLVideoElement, Props>(
   ({ className, onReadyStateChange }, ref) => {
