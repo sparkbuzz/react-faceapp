@@ -45,7 +45,7 @@ const FaceLandmarksOverlay = ({ className, drawPointCloud, srcObject }: Props) =
     }
 
     function updateEmoticons (scaleWidth: number, scaleHeight: number) {
-      if (!predictions || !srcObject.current) return;
+      if (!predictions || predictions.length === 0 || !srcObject.current) return;
 
       const offsetX = (eyeLRef.current?.offsetWidth ?? 0) / 2;
       const offsetY = (eyeRRef.current?.offsetHeight ?? 0) / 2;
@@ -100,8 +100,23 @@ const FaceLandmarksOverlay = ({ className, drawPointCloud, srcObject }: Props) =
 
   return <>
     <canvas className={classNames(className, styles.canvas)} ref={canvasRef}/>
-    <Emoticon ref={eyeLRef} flip style={{ top: `${leftIrisPosition.y}px`, left: `${leftIrisPosition.x}px` }}/>
-    <Emoticon ref={eyeRRef} style={{ top: `${rightIrisPosition.y}px`, left: `${rightIrisPosition.x}px` }}/>
+    <Emoticon
+      flip
+      ref={eyeLRef}
+      style={{
+        display: predictions && predictions?.length ? 'block' : 'none',
+        top: `${leftIrisPosition.y}px`,
+        left: `${leftIrisPosition.x}px`
+      }}
+    />
+    <Emoticon
+      ref={eyeRRef}
+      style={{
+        display: predictions && predictions?.length ? 'block' : 'none',
+        top: `${rightIrisPosition.y}px`,
+        left: `${rightIrisPosition.x}px`
+      }}
+    />
   </>;
 };
 
